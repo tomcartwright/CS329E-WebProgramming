@@ -1,7 +1,0 @@
-{
-  "name": "metis",
-  "short_name": "metis",
-  "description": "An app made for getting rid of boredom and having fun",
-  "start_url": "/",
-  "display": "standalone"
-}
