@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    font-family: "Arial Black";
+}
+img {
+    width: 640px;
+    height: 480px;
+    border: 5px coral solid;
+}
+figure {
+    font-family: Arial;
+    text-align: center;
+}

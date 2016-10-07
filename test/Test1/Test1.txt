@@ -1,0 +1,61 @@
+
+CS 329E (Mitra)           Test 1              5 Oct 2016
+
+A new French restaurant called Bon Appetit has opened in your
+neighborhood. It is an upscale restaurant that serves ridiculously
+small portions at extravagantly high prices. They have asked you
+to create a web page for them.
+
+The web page must be colorful and lush. You must have a HTML
+page called test1.html and a CSS page called test1.css. All of
+the structural information and text will be in the .html file
+and all the design and layout information in the .css file. 
+
+You must have at least a two column layout with header and footer. 
+You will have the following links: menus, wine list, reservations, 
+reviews, and about us. The links - menus, wine list, reviews, and 
+about us should point to an empty HTML page that includes a redirect
+link back to the restaurant's home page.
+
+Only the reservations link will be a working link. It will link
+to a page that has a form. This form will be simple but elegant
+having fields - name, phone number, number of guests, date, and
+time. You must use the HTML5 Date Time picker. There should also 
+be a submit and reset button. The action attribute for the form 
+should be blank.
+
+For the home page of this restaurant you must use at least five
+of the images that we have given you. You must use an additional
+three images that you have either downloaded from the internet 
+or three additional images from the ones that we have given you.
+In all you will have eight images.
+
+You will have to write the text that goes with the homepage. You
+want the text to be short and simple. The text and the design have
+to be professional and befitting of an upscale restaurant. All 
+the test must be brief but relevant. There must not be spelling 
+or grammatical errors in your text.
+
+You have two hours to complete the project. We will give you
+an extra hour without penalty. You may take more than three
+hours to complete. But after three hours there is a penalty
+of 10 points for every half hour (or part of a half hour) late.
+
+During the exam period, you may use any printed material, you may
+browse the internet and look at actual sites of upscale restaurants. 
+But you cannot consult any one on this project. You may not talk or 
+excahnge information about the test with any of your classmates 
+or with any other person in the world or get help from someone
+else. It has to be solely your own work! 
+
+We suggest that you do all your development work on your local 
+machine. If you did your development work on the z server, make 
+sure after you have have finished that you make all your files 
+connected with this test unreadable by changing the permission
+to 600. It is your responsibility to protect your work.  
+
+After you have finished, we want you to zip the .html and .css 
+files and all the image files that you have used. Call the zip
+file your_uteid_test1.zip. Upload that zipped file to Canvas.
+Do not make changes to your files after the submission deadline.
+

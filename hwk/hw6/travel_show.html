@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Show</title>
+  <link rel="stylesheet" href="travel_show.css">
+</head>
+<body>
+  <h1>Travel Show</h1>
+  <figure>
+    <img src="agra_fort.jpg">
+    <figcaption>Agra Fort</figcaption>
+  </figure>
+<script type="application/javascript" rel="script">
+  var fnames = ["agra_fort.jpg", "ajanta_ellora.jpeg", "akshardham_temple.jpg", "char_minar.jpg", "hawa_mahal.jpeg",
+                "mysore_palace.jpeg", "sun_temple.jpg", "taj_mahal.jpeg", "victoria_memorial.jpg", "mumbai.jpeg"];
+  var capnames = ["Agra Fort", "Ajanta Ellora", "Akshardham Temple", "Char Minar", "Hawa Mahal", "Mysore Palace",
+                  "Sun Temple", "Taj Mahal", "Victoria Memorial Hall", "Gateway of India"];
+  var idx = 0;
+  var changeFigure = function () {
+    idx += 1;
+    idx %= fnames.length;
+    var img = document.getElementsByTagName("img")[0];
+    var figcap = document.getElementsByTagName("figcaption")[0];
+    img.src = fnames[idx];
+    figcap.innerHTML = capnames[idx];
+  }
+  setInterval(changeFigure, 3000);
+</script>
+</body>
+</html>

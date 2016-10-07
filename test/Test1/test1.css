@@ -1,0 +1,68 @@
+body {
+    font-family: "Edwardian Script ITC";
+    text-align: center;
+    background-image: url("paris.jpg"), url("paris-bridge.jpg");
+    background-repeat: no-repeat, repeat;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+header > h1 {
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+header > h2 {
+    font-family: "Copperplate Gothic Light";
+}
+nav {
+    font-size: 50px;
+    background-color: tomato;
+}
+nav > a {
+    padding-right: 50px;
+}
+section {
+    font-family: "Copperplate Gothic Light";
+}
+figure, form {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px black solid;
+}
+figcaption {
+    font-family: "Edwardian Script ITC";
+    font-size: 40px;
+    font-style: oblique;
+    background-color: cornflowerblue;
+}
+figure > img {
+    border-left: 2px tomato solid;
+    border-right: 2px tomato solid;
+    border-bottom: 2px tomato solid;
+    width: 640px;
+    height: 480px;
+}
+p {
+    padding-bottom: 50px;
+}
+footer {
+    font-size: 30px;
+    font-family: "Copperplate Gothic Light";
+}
+form {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
+label {
+    padding-left: 15px;
+}
+.col {
+    width: 50%;
+}
+.l-col {
+    float: left;
+}
+.r-col {
+    float: right;
+}

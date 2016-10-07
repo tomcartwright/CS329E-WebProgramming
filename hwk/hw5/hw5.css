@@ -1,0 +1,15 @@
+img {
+    height: 480px;
+    width: 640px;
+    border: coral 5px solid;
+}
+h1 {
+    font-family: "Arial Black";
+    text-align: center;
+}
+figure {
+    padding-left: 32%;
+}
+figcaption {
+    font-family: "Arial";
+}
