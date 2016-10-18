@@ -58,5 +58,5 @@ var gradeQuiz = function () {
   window.alert("Your grade is " + q_grade.toString() + " / 6")
 };
 var clearQuiz = function () {
-
+  window.location.href = "./hw9.html"
 };
