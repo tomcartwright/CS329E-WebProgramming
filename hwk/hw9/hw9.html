@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astronomy Quiz</title>
+  <!-- Google MDL -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script rel="script" src="hw9.js"></script>
+</head>
+<body>
+<h1>Astronomy Quiz</h1>
+<ol>
+  <li>
+    According to Kepler the orbit of the earth is a circle with the sun at the center.
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1-opt1" id="q1-opt1-l">
+      <input type="radio" id="q1-opt1" class="mdl-radio__button" name="answer1" value="True">
+      <span class="mdl-radio__label">True</span>
+    </label>
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q1-opt2" id="q1-opt2-l">
+      <input type="radio" id="q1-opt2" class="mdl-radio__button" name="answer1" value="False">
+      <span class="mdl-radio__label">False</span>
+    </label>
+  </li>
+  <li>
+    Ancient astronomers did consider the heliocentric model of the solar system but rejected it because they could
+    not detect parallax.
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2-opt1" id="q2-opt1-l">
+      <input type="radio" id="q2-opt1" class="mdl-radio__button" name="answer2" value="True">
+      <span class="mdl-radio__label">True</span>
+    </label>
+    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="q2-opt2" id="q2-opt2-l">
+      <input type="radio" id="q2-opt2" class="mdl-radio__button" name="answer2" value="False">
+      <span class="mdl-radio__label">False</span>
+    </label>
+  </li>
+  <li>
+    The total amount of energy that a star emits is directly related to its
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q3-opt1" id="q3-opt1-l">
+      <input type="checkbox" id="q3-opt1" class="mdl-checkbox__input" value="surface gravity and magnetic field">
+      <span class="mdl-checkbox__label">surface gravity and magnetic field</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q3-opt2" id="q3-opt2-l">
+      <input type="checkbox" id="q3-opt2" class="mdl-checkbox__input" value="radius and temperature">
+      <span class="mdl-checkbox__label">radius and temperature</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q3-opt3" id="q3-opt3-l">
+      <input type="checkbox" id="q3-opt3" class="mdl-checkbox__input" value="pressure and volume">
+      <span class="mdl-checkbox__label">pressure and volume</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q3-opt4" id="q3-opt4-l">
+      <input type="checkbox" id="q3-opt4" class="mdl-checkbox__input" value="location and velocity">
+      <span class="mdl-checkbox__label">location and velocity</span>
+    </label>
+  </li>
+  <li>
+    Stars that live the longest have
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q4-opt1" id="q4-opt1-l">
+      <input type="checkbox" id="q4-opt1" class="mdl-checkbox__input" value="high mass">
+      <span class="mdl-checkbox__label">high mass</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q4-opt2" id="q4-opt2-l">
+      <input type="checkbox" id="q4-opt2" class="mdl-checkbox__input" value="high temperature">
+      <span class="mdl-checkbox__label">high temperature</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q4-opt3" id="q4-opt3-l">
+      <input type="checkbox" id="q4-opt3" class="mdl-checkbox__input" value="lots of hydrogen">
+      <span class="mdl-checkbox__label">lots of hydrogen</span>
+    </label>
+    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="q4-opt4" id="q4-opt4-l">
+      <input type="checkbox" id="q4-opt4" class="mdl-checkbox__input" value="small mass">
+      <span class="mdl-checkbox__label">small mass</span>
+    </label>
+  </li>
+  <li>
+    A collection of a hundred billion stars, gas, and dust is called a _____.
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="q5">
+      <label class="mdl-textfield__label" for="q5">Answer...</label>
+    </div>
+  </li>
+  <li>
+    The inverse of the Hubble's constant is a measure of the _____ of the universe.
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="q6">
+      <label class="mdl-textfield__label" for="q6">Answer...</label>
+    </div>
+  </li>
+</ol>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="grade" onclick="gradeQuiz()">
+  Grade
+</button>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="clear" onclick="clearQuiz()">
+  Clear
+</button>
+</body>
+</html>

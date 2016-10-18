@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mortgage Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script rel="script" src="hw7.js"></script>
+</head>
+<body>
+<section>
+  <div class="mdl-grid">
+    <!-- Use Google's grid for a nice looking form -->
+    <div class="mdl-cell mdl-cell--3-col"><!-- Spacer column --></div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <!-- This is where we'll put our form -->
+      <h1>Mortgage Calculator</h1>
+      <!-- Now for the form -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="principle">
+          <label class="mdl-textfield__label" for="principle">Principal Amount</label>
+          <span class="mdl-textfield__error">Input is not a valid Principal!</span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="[0-9]*(\.[0-9]+)?" id="apr">
+          <label class="mdl-textfield__label" for="apr">Yearly Percentage Rate</label>
+          <span class="mdl-textfield__error">Input is not a valid APR!</span>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="loan-term">
+          <label class="mdl-textfield__label" for="loan-term">Loan Term in months</label>
+          <span class="mdl-textfield__error">Input is not a valid month! Fractional months will be rounded</span>
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                onclick="showOutput()">
+          Calculate
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="clearInputs()">
+          Clear
+        </button>
+      </form>
+      <h3>Monthly Payments</h3>
+      <p id="monthly-payments"></p>
+      <h3>Sum of all Payments</h3>
+      <p id="p-sum"></p>
+      <h3>Total Interest Paid</h3>
+      <p id="total-interest"></p>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col"><!-- Spacer column --></div>
+  </div>
+</section>
+</body>
+</html>

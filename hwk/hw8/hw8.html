@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game of 15</title>
+  <!-- Use Google MDL Styling -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script rel="script" src="hw8.js"></script>
+</head>
+<body>
+<h1>Welcome to the Game of 15</h1>
+<h3>How to Play</h3>
+<p>
+  The goal of the game is to move the mixed up tiles into order with 1 in the top left and 15 in the second to last
+  bottom right. You can switch the empty tile with a tile above, below, left, or right of it by clicking on the
+  adjacent tile. You can click the generate a new tile set by clicking the reset button or refreshing the page. Have
+  fun!
+</p>
+<div class="mdl-grid">
+  <!-- Left Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b00"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b01"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b02"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b03"
+            onclick="swapTile(this.id)"></button>
+  </div>
+  <!-- Right Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class="mdl-grid">
+  <!-- Left Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b10"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b11"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b12"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b13"
+            onclick="swapTile(this.id)"></button>
+  </div>
+  <!-- Right Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class="mdl-grid">
+  <!-- Left Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b20"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b21"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b22"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b23"
+            onclick="swapTile(this.id)"></button>
+  </div>
+  <!-- Right Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class="mdl-grid">
+  <!-- Left Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b30"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b31"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b32"
+            onclick="swapTile(this.id)"></button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="b33"
+            onclick="swapTile(this.id)"></button>
+  </div>
+  <!-- Right Spacer -->
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class="mdl-grid">
+  <!-- Left Spacer -->
+  <div class="mdl-cell mdl-cell--5-col"></div>
+  <div class="mdl-cell mdl-cell--2-col">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="reset"
+            onclick="resetGame()">
+      reset
+    </button>
+  </div>
+  <!-- Right Spacer -->
+  <div class="mdl-cell mdl-cell--5-col"></div>
+</div>
+</body>
+</html>
