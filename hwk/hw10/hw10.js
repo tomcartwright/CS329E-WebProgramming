@@ -24,7 +24,7 @@ var get2DArray = function() {
   return new_array
 };
 var showElement = function (id) {
-  s_id = id.splice(1);
+  var s_id = id.splice(1);
   var row = parseInt(s_id[0]);
   var col = parseInt(s_id[1]);
 };
