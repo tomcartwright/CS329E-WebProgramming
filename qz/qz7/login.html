@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scimpl</title>
+  <link rel="icon" type="image/png" sizes="196x196" href="./img/favicon-192.png">
+  <!-- CSS, JS -->
+  <link rel="stylesheet" href="css/material.min.css"/>
+  <script rel="script" src="./js/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script rel="script" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<!-- Load Facebook SDK, Login/Signup JS -->
+<script>
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+              'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+              'into Facebook.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '1014103248687599',
+      cookie: true,  // enable cookies to allow the server to access
+                     // the session
+      xfbml: true,  // parse social plugins on this page
+      version: 'v2.8' // use graph api version 2.8
+    });
+
+    // Now that we've initialized the JavaScript SDK, we call
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
+    });
+
+  };
+
+  // Load the SDK asynchronously
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function (response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+              'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">
+        <a href="index.html"><img src="img/scimpl_logo.png" height="55px" width="290px"></a>
+      </span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="error404.html">TUTORIALS</a>
+        <a class="mdl-navigation__link" href="error404.html">SIMULATIONS</a>
+        <a class="mdl-navigation__link" href="error404.html">ANALYTICS</a>
+        <a class="mdl-navigation__link" href="error404.html">BLOG</a>
+        <a class="mdl-navigation__link" href="login.html">SIGN UP</a>
+        <a class="mdl-navigation__link" href="login.html">LOG IN</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Scimpl</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="error404.html">TUTORIALS</a>
+      <a class="mdl-navigation__link" href="error404.html">SIMULATIONS</a>
+      <a class="mdl-navigation__link" href="error404.html">ANALYTICS</a>
+      <a class="mdl-navigation__link" href="error404.html">BLOG</a>
+      <a class="mdl-navigation__link" href="login.html">SIGN UP</a>
+      <a class="mdl-navigation__link" href="login.html">LOG IN</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <!-- Your content goes here -->
+    <div class="page-content">
+      <!-- Grid for easy formatting -->
+      <div class="mdl-grid">
+        <!-- Left column -->
+        <div class="mdl-cell mdl-cell--6-col">
+          <h3>Sign Up</h3>
+          <h6>Sign Up with Facebook</h6>
+          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+          </fb:login-button>
+          <h6>Sign Up Manually</h6>
+          <form action="state.php" method="post">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="signupId" name="user name">
+              <label class="mdl-textfield__label" for="signupId">
+                Username
+              </label>
+              <span class="mdl-textfield__error">Not a valid email address!</span>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="password" id="signupPassword" name="password">
+              <label class="mdl-textfield__label" for="signupPassword">
+                Password
+              </label>
+              <span class="mdl-textfield__error">Password length must be 8 alphanumeric characters or greater!</span>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    type="submit">
+              Sign Up
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    type="reset">
+              Clear
+            </button>
+          </form>
+        </div>
+        <!-- Right column -->
+        <div class="mdl-cell mdl-cell--6-col">
+          <h3>Login</h3>
+          <h6>Login With Facebook</h6>
+          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+          </fb:login-button>
+          <h6>Login Manually</h6>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="loginId"
+                   pattern="[a-zA-Z0-9]*(@){1}[a-z]*(\.){1}[a-z]*">
+            <label class="mdl-textfield__label" for="loginId">
+              Email
+            </label>
+            <span class="mdl-textfield__error">Not a valid email address!</span>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="loginPassword" pattern="[a-zA-Z0-9]{8,}">
+            <label class="mdl-textfield__label" for="loginPassword">
+              Password
+            </label>
+            <span class="mdl-textfield__error">Password length must be 8 alphanumeric characters or greater!</span>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Small footer -->
+  <footer style="height: 30px; padding: 8px" class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">
+        <a href="index.html"><img src="img/scimpl_logo.png" height="20px" width="106px"></a>
+      </div>
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="company.html">Company</a></li>
+        <li><a href="error404.html">Help</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mdl-mini-footer--right-section">
+      Scimpl &copy; 2016
+    </div>
+  </footer>
+</div>
+</body>
+</html>
